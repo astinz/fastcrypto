@@ -1,0 +1,19 @@
+[package]
+name = "fastcrypto-uniffi"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+name = "fastcrypto_uniffi"
+
+[dependencies]
+uniffi = { version = "0.25.3", features = ["cli"] }
+fastcrypto = { path = "../../fastcrypto" }
+hex = "0.4"
+anyhow = "1.0"
+thiserror = "1.0"
+rand = "0.8.5"
+
+[build-dependencies]
+uniffi = { version = "0.25.3", features = ["build"] }
